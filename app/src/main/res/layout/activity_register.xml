@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/registrar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="25dp"
+            android:text="Registrar Ingresos / Egresos"/>
+
+        <EditText
+            android:id="@+id/monto_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/registrar_text"
+            android:layout_marginBottom="16dp"
+            android:textSize="25dp"
+            android:hint="Monto"/>
+
+        <RadioGroup
+            android:id="@+id/opciones_registro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/monto_text"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_ingreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:checked="true"
+                android:textSize="20dp"
+                android:text="Ingreso" />
+
+            <RadioButton
+                android:id="@+id/radio_egreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:checked="false"
+                android:text="Egreso" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tipo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/opciones_registro"
+            android:text="Tipo de cuenta"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:id="@+id/tipo_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipo_text"
+            android:layout_marginBottom="28dp"
+            android:entries="@array/tipo_cuenta_list"
+            />
+        <Button
+            android:id="@+id/registrar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipo_spinner"
+            android:background="@color/colorPrimary"
+            android:text="Registrar"/>
+
+    </RelativeLayout>
+
+</ScrollView>

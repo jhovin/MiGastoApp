@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MisGastosApp</string>
+    <string-array name="tipo_cuenta_list">
+        <item>Ahorro</item>
+        <item>Tarjeta de credito</item>
+        <item>Efectivo</item>
+    </string-array>
+</resources>
